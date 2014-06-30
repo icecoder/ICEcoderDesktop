@@ -16,7 +16,7 @@ echo $ICEcoder["password"] == "" && !$ICEcoder["multiUser"] ? "Setup" : "Login";
 <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 
-<body onLoad="document.settingsUpdate.<?php echo $ICEcoder["multiUser"] ? "username" : "password";?>.focus()">
+<body onLoad="alert('This is a super early-bird version of ICEcoder Desktop. As much of the code is untested at present, it is highly recommended that you run this in a sandboxed dev environment, such as a USB key. Please report any bugs at http://github.com/mattpass/ICEcoderDesktop');document.settingsUpdate.<?php echo $ICEcoder["multiUser"] ? "username" : "password";?>.focus()">
 	
 <div class="screenContainer" style="background-color: #141414">
 	<div class="screenVCenter">
