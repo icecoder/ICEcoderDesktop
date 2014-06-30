@@ -4,13 +4,13 @@
         "dpi_aware": true
     },
     "debugging": {
-        "show_console": true,
+        "show_console": false,
         "subprocess_show_console": false,
         "log_level": "DEBUG4",
         "log_file": "debug.log"
     },
     "main_window": {
-        "title": "PHP Desktop Chrome",
+        "title": "ICEcoder Desktop v0.1",
         "icon": "",
         "default_size": [1024, 768],
         "minimum_size": [800, 600],
@@ -18,7 +18,7 @@
         "disable_maximize_button": false,
         "center_on_screen": true,
         "start_maximized": false,
-        "start_fullscreen": false
+        "start_fullscreen": true
     },
     "popup_window": {
         "icon": "",
