@@ -10,7 +10,7 @@
         "log_file": "debug.log"
     },
     "main_window": {
-        "title": "ICEcoder Desktop v0.1",
+        "title": "ICEcoder Desktop v0.2",
         "icon": "",
         "default_size": [1024, 768],
         "minimum_size": [800, 600],

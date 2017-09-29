@@ -1,7 +1,11 @@
 <?php
+include_once("settings-common.php");
+$text = $_SESSION['text'];
+$t = $text['settings-save-current-files'];
+
 // Save the currently opened files for next time
 if ($_SESSION['loggedIn'] && isset($_GET["saveFiles"]) && $_GET['saveFiles']) {
-	$settingsContents = file_get_contents($settingsFile,false,$context);
+	$settingsContents = getData($settingsFile);
 
 	// Replace our previousFiles var with the the current
 	$repPosStart = strpos($settingsContents,'previousFiles"		=> "')+20;
@@ -27,7 +31,7 @@ if ($_SESSION['loggedIn'] && isset($_GET["saveFiles"]) && $_GET['saveFiles']) {
 			fwrite($fh, $settingsContents);
 			fclose($fh);
 		} else {
-			echo "<script>top.ICEcoder.message('Cannot update config file. Please set public write permissions on lib/".$settingsFile." and try again');</script>";
+			echo "<script>top.ICEcoder.message('".$t['Cannot update config...']." lib/".$settingsFile." ".$t['and try again']."');</script>";
 		}
 
 		// Update our last10Files var?
@@ -46,7 +50,7 @@ if ($_SESSION['loggedIn'] && isset($_GET["saveFiles"]) && $_GET['saveFiles']) {
 					fwrite($fh, $settingsContents);
 					fclose($fh);
 				} else {
-					echo "<script>top.ICEcoder.message('Cannot update config file. Please set public write permissions on lib/".$settingsFile." and try again');</script>";
+					echo "<script>top.ICEcoder.message('".$t['Cannot update config...']." lib/".$settingsFile." ".$t['and try again']."');</script>";
 				}
 			}
 		}
