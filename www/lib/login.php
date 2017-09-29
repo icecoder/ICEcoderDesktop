@@ -18,7 +18,7 @@ echo $ICEcoder["password"] == "" && !$ICEcoder["multiUser"] ? "Setup" : "Login";
 <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 
-<body style="background-color: #181817" onLoad="onLoad="alert('This is a super early-bird version of ICEcoder Desktop. As much of the code is untested at present, it is highly recommended that you run this in a sandboxed dev environment, such as a USB key. Please report any bugs at https://github.com/mattpass/ICEcoderDesktop');<?php if (!isset($_GET["get"])) {$inputFocus = $ICEcoder["multiUser"] ? "username" : "password"; echo "document.settingsUpdate.".$inputFocus.".focus(); ";}; ?>setTimeout(function(){document.getElementById('screenContainer').style.opacity=1},50)">
+<body style="background-color: #181817" onLoad="alert('This is a super early-bird version of ICEcoder Desktop. As much of the code is untested at present, it is highly recommended that you run this in a sandboxed dev environment, such as a USB key. Please report any bugs at http://github.com/mattpass/ICEcoderDesktop');<?php if (!isset($_GET["get"])) {$inputFocus = $ICEcoder["multiUser"] ? "username" : "password"; echo "document.settingsUpdate.".$inputFocus.".focus(); ";}; ?>setTimeout(function(){document.getElementById('screenContainer').style.opacity=1},50)">
 	
 <div class="screenContainer" id="screenContainer" style="background-color: #181817; opacity: 0; transition: opacity 0.1s ease-out">
 	<div class="screenVCenter">
